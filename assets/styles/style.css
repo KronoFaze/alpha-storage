@@ -30,7 +30,7 @@ nav {
 	content: "";
 	display: block;
 	height: 0.2rem;
-	background: black;
+	background: rgba(37, 187, 233, 0.493);
 	position: absolute;
 	top: -0.01rem;
 	left: 0;
