@@ -31,60 +31,83 @@
 						<li class="nav-item"><a href="#" class="nav-link">Features</a></li>
 						<li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
 					</ul>
-					<button class="btn btn-primary mr-2 px-3 login-button">Sign In</button>
+					<button class="btn btn-primary mr-2 px-3">Sign In</button>
 					<button class="btn btn-outline-success">Sign Up</button>
 				</div>
 			</div>
 		</nav>
 
+		<!-- nav ends -->
+
 		<section class="main-section container">
 			<div class="row">
 				<div class="col-12 col-lg-8 motto">
 					<h1 class="display-4">Why Choose Us</h1>
-						<p class="lead">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, suscipit ratione et
-							voluptatibus, aperiam beatae dicta veritatis neque in consequatur, nihil voluptatem laboriosam
-							ipsa iure. Optio ad at dicta autem sapiente quos doloribus vel illo nemo minus, quasi non porro
-							accusantium repudiandae itaque dolor. Ratione cum earum qui. Sequi, accusamus?
-						</p>
-						<hr class="my-4" />
-						<p>
-							It uses utility classes for typography and spacing to space content out within the larger
-							container.
-						</p>
-						<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+					<p class="lead">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, suscipit ratione et voluptatibus,
+						aperiam beatae dicta veritatis neque in consequatur, nihil voluptatem laboriosam ipsa iure. Optio
+						ad at dicta autem sapiente quos doloribus vel illo nemo minus, quasi non porro accusantium
+						repudiandae itaque dolor. Ratione cum earum qui. Sequi, accusamus?
+					</p>
+					<hr class="my-4" />
+					<p>
+						It uses utility classes for typography and spacing to space content out within the larger
+						container.
+					</p>
+					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 				</div>
-				<div class="login-form col-lg-4 d-none d-lg-block">
-					<form>
-							<h2 class="text-center">Sign In</h2>       
-							<div class="form-group">
-									<input type="email" class="form-control" placeholder="Email" required>
+				<div class="col-lg-4 d-none d-lg-block">
+					<form class="sign-in-form">
+						<h2 class="text-center">Sign In</h2>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email" autocomplete="email" required />
+						</div>
+						<div class="form-group">
+							<input
+								type="password"
+								class="form-control"
+								placeholder="Password"
+								autocomplete="current-password"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block form-sign-in-button">Sign in</button>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<label class="pull-left checkbox-inline"><input type="checkbox" /> Remember me</label>
 							</div>
-							<div class="form-group">
-									<input type="password" class="form-control" placeholder="Password" required>
+							<div class="col-6">
+								<a href="#" class="pull-right">Forgot Password?</a>
 							</div>
-							<div class="form-group">
-									<button type="submit" class="btn btn-primary btn-block">Sign in</button>
-							</div>
-							<div class="row">
-								<div class="col-6">
-									<label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-								</div>
-								<div class="col-6">
-									<a href="#" class="pull-right">Forgot Password?</a>
-								</div>
-							</div>
-							<p class="text-center">New Here?</p>      
-							<a class="btn btn-success btn-block mt-2" href="#">Create an Account</a>
+						</div>
+						<p class="text-center">Don't have an account?</p>
+						<a class="btn btn-success btn-block mt-2 form-sign-in-toggle-button" href="#">Sign Up</a>
 					</form>
-			</div>
+					<form class="sign-up-form">
+						<h2 class="text-center">Sign Up</h2>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email" required />
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Password" required />
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Confirm Password" required />
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block form-sign-up-button">Sign Up</button>
+						</div>
+						<p class="text-center">Already have an account?</p>
+						<a class="btn btn-success btn-block mt-2 form-sign-up-toggle-button" href="#">Sign In</a>
+					</form>
 				</div>
 			</div>
 		</section>
 
-
-
 		<!-- Javasript -->
+		<script src="/assets/scripts/app.js"></script>
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
