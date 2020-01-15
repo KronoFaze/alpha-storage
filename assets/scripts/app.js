@@ -2,15 +2,15 @@ const formSignInToggleButton = document.querySelector(".form-sign-in-toggle-butt
 const formSignUpToggleButton = document.querySelector(".form-sign-up-toggle-button");
 
 formSignInToggleButton.addEventListener("click", function() {
+	document.querySelector(".sign-in-form").classList.remove("fade-in");
 	document.querySelector(".sign-in-form").style.display = "none";
+	document.querySelector(".sign-up-form").classList.add("fade-in");
 	document.querySelector(".sign-up-form").style.display = "block";
-	document.querySelector(".sign-in-form").classList.remove("form-toggle");
-	document.querySelector(".sign-up-form").classList.add("form-toggle");
 });
 
 formSignUpToggleButton.addEventListener("click", function() {
+	document.querySelector(".sign-up-form").classList.remove("fade-in");
 	document.querySelector(".sign-up-form").style.display = "none";
+	document.querySelector(".sign-in-form").classList.add("fade-in");
 	document.querySelector(".sign-in-form").style.display = "block";
-	document.querySelector(".sign-up-form").classList.remove("form-toggle");
-	document.querySelector(".sign-in-form").classList.add("form-toggle");
 });
