@@ -1,103 +1,180 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+a {
+	color: white;
+}
+
 body {
-	height: 200vh;
-	background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-	font-family: "Nunito", sans-serif;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.6rem;
 }
-
 nav {
-	background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+	background: #222;
+	width: 100%;
+	padding: 0.5rem 2rem;
+	position: fixed;
+}
+/* .nav-watermark {
+	background: #222;
+	height: 9rem;
+	width: 100%;
+} */
+.section-home {
+	height: 100vh;
+	background: url("/assets/img/Cloud-Storage.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	background-size: cover;
+}
+.section-features {
+	height: 100vh;
+	background: url("/assets/img/cloudstorage-100806486-orig.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	background-size: cover;
+}
+.section-contact-us {
+	height: 100vh;
+	background: url("/assets/img/cloud-storage.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	background-size: cover;
 }
 
-#mainNav .navbar-brand {
-	font-size: 2rem;
-	font-weight: 700;
+/* Mobile Menu */
+
+.nav-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
 }
-
-#navLinks {
-	font-size: 1.3rem;
-}
-
-#navLinks li {
-	margin-right: 2rem;
-}
-
-#navLinks .nav-link {
-	position: relative;
-	display: inline-block;
-}
-
-#navLinks .nav-link::before {
-	content: "";
-	display: block;
-	height: 0.2rem;
-	background: rgba(37, 187, 233, 0.493);
-	position: absolute;
-	top: -0.01rem;
-	left: 0;
-	right: 0;
-	transform: scale(0, 1);
-	transition: transform ease-in-out 200ms;
-}
-
-#navLinks .nav-link:hover::before {
-	transform: scale(1, 1);
-}
-
-.login-button:hover {
-	background-color: transparent;
-	border-color: #007bff;
-	color: #007bff;
-}
-
-/* nav ends here */
-
-.main-section {
-	margin-top: 15rem;
-}
-
-.motto {
-	background: #f7f7f7bb;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	border-radius: 5px;
-	padding: 30px;
-}
-
-/* motto ends here */
-
-.sign-in-form,
-.sign-up-form {
-	background: #f7f7f7bb;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	border-radius: 5px;
-	padding: 30px;
-}
-
-.main-section .form-control,
-.btn {
-	min-height: 38px;
-	border-radius: 4px;
-}
-
-.main-section .btn {
-	font-weight: bold;
-}
-
-.sign-up-form {
+.collapse {
+	width: 100%;
+	text-align: center;
+	border-top: 1px #444 solid;
 	display: none;
 }
-
-.fade-in {
-	animation: fadeIn 1s;
+.collapse a {
+	padding: 1.5rem 0.5rem;
+}
+.active {
+	display: block;
+}
+.nav-item:not(.collapse) {
+	padding: 1.5rem 0.5rem;
+}
+.nav-item a {
+	display: block;
+}
+.name {
+	font-size: 3rem;
+}
+.ham-menu {
+	cursor: pointer;
+}
+.ham-bar {
+	background: #999;
+	display: inline-block;
+	height: 0.2rem;
+	width: 1.8rem;
+	position: relative;
+}
+.ham-bar::before,
+.ham-bar::after {
+	content: "";
+	background: #999;
+	display: inline-block;
+	height: 0.2rem;
+	width: 1.8rem;
+	position: absolute;
+}
+.ham-bar::before {
+	top: -1rem;
+}
+.ham-bar::after {
+	top: -0.5rem;
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
+/* Tablet Menu */
 
-	to {
-		opacity: 1;
+@media all and (min-width: 768px) {
+	.nav-items {
+		justify-content: center;
+	}
+	.nav-item.button a {
+		outline: 1px #999 solid;
+	}
+	.nav-item.button {
+		padding: 1.5rem 0.5rem;
+	}
+	.logo {
+		flex: 1;
+		order: 0;
+	}
+	.nav-item.button {
+		width: auto;
+		display: block;
+		order: 1;
+		border-top: none;
+	}
+	.nav-item.button a {
+		padding: 0.7rem 1.5rem;
+	}
+	.ham-menu {
+		order: 2;
+	}
+	.nav-item.link {
+		order: 3;
 	}
 }
 
-/* user form ends here */
+/* Desktop Menu */
+
+@media all and (min-width: 992px) {
+	.nav-items {
+		width: 80%;
+		margin: auto;
+	}
+	.nav-item {
+		padding: 1.5rem 1rem;
+	}
+	.nav-item.button {
+		padding: 1.5rem 1rem;
+	}
+	.collapse {
+		display: block;
+		width: auto;
+		border: none;
+	}
+	.nav-item.button {
+		padding-right: 0;
+	}
+	.ham-menu {
+		display: none;
+	}
+	.logo {
+		order: 0;
+	}
+	.nav-item.link {
+		order: 1;
+	}
+	.nav-item.button {
+		order: 2;
+	}
+}

@@ -4,124 +4,32 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-		<link rel="icon" href="/assets/img/icon.png" />
 		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap"
 			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-			crossorigin="anonymous"
 		/>
-
+		<link rel="icon" href="/assets/img/icon.png" />
 		<link rel="stylesheet" href="/assets/styles/style.css" />
-		<title>Alpha Storage</title>
+		<title>OverDrive</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-dark navbar-expand-lg fixed-top py-3 px-0" id="mainNav">
-			<div class="container">
-				<a href="#" class="navbar-brand">AlphaStorage</a>
-				<button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navLinks">
-					<ul class="navbar-nav ml-auto mb-3 mb-lg-0">
-						<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">About</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-					</ul>
-					<button class="btn btn-primary mr-2 px-3">Sign In</button>
-					<button class="btn btn-outline-success">Sign Up</button>
-				</div>
-			</div>
+		<nav>
+			<ul class="nav-items">
+				<li class="nav-item logo"><a href="#" class="name">OverDrive</a></li>
+				<li class="nav-item ham-menu"><span class="ham-bar"></span></li>
+				<li class="nav-item link collapse"><a href="#">HOME</a></li>
+				<li class="nav-item link collapse"><a href="#">FEATURES</a></li>
+				<li class="nav-item link collapse"><a href="#">CONTACT US</a></li>
+				<li class="nav-item button collapse"><a href="#" class="primary">Log In</a></li>
+				<li class="nav-item button collapse"><a href="#" class="secondary">Sign Up</a></li>
+			</ul>
 		</nav>
-
-		<!-- nav ends -->
-
-		<section class="main-section container">
-			<div class="row">
-				<div class="col-12 col-lg-8 motto">
-					<h1 class="display-4">Why Choose Us</h1>
-					<p class="lead">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, suscipit ratione et voluptatibus,
-						aperiam beatae dicta veritatis neque in consequatur, nihil voluptatem laboriosam ipsa iure. Optio
-						ad at dicta autem sapiente quos doloribus vel illo nemo minus, quasi non porro accusantium
-						repudiandae itaque dolor. Ratione cum earum qui. Sequi, accusamus?
-					</p>
-					<hr class="my-4" />
-					<p>
-						It uses utility classes for typography and spacing to space content out within the larger
-						container.
-					</p>
-					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-				</div>
-				<div class="col-lg-4 d-none d-lg-block">
-					<form class="sign-in-form">
-						<h2 class="text-center">Sign In</h2>
-						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Email" autocomplete="email" required />
-						</div>
-						<div class="form-group">
-							<input
-								type="password"
-								class="form-control"
-								placeholder="Password"
-								autocomplete="current-password"
-								required
-							/>
-						</div>
-						<div class="form-group">
-							<button type="submit" class="btn btn-primary btn-block form-sign-in-button">Sign in</button>
-						</div>
-						<div class="row">
-							<div class="col-6">
-								<label class="pull-left checkbox-inline"><input type="checkbox" /> Remember me</label>
-							</div>
-							<div class="col-6">
-								<a href="#" class="pull-right">Forgot Password?</a>
-							</div>
-						</div>
-						<p class="text-center">Don't have an account?</p>
-						<a class="btn btn-success btn-block mt-2 form-sign-in-toggle-button" href="#">Sign Up</a>
-					</form>
-					<form class="sign-up-form">
-						<h2 class="text-center">Sign Up</h2>
-						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Email" required />
-						</div>
-						<div class="form-group">
-							<input type="password" class="form-control" placeholder="Password" required />
-						</div>
-						<div class="form-group">
-							<input type="password" class="form-control" placeholder="Confirm Password" required />
-						</div>
-						<div class="form-group">
-							<button type="submit" class="btn btn-primary btn-block form-sign-up-button">Sign Up</button>
-						</div>
-						<p class="text-center">Already have an account?</p>
-						<a class="btn btn-success btn-block mt-2 form-sign-up-toggle-button" href="#">Sign In</a>
-					</form>
-				</div>
-			</div>
-		</section>
-
-		<!-- Javasript -->
+		<!-- <section class="nav-watermar"></section> -->
+		<section class="section-home"></section>
+		<section class="section-features"></section>
+		<section class="section-contact-us"></section>
+		<!-- JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="/assets/scripts/app.js"></script>
-		<script
-			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-			crossorigin="anonymous"
-		></script>
 	</body>
 </html>
