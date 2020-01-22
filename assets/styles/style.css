@@ -115,6 +115,7 @@ nav {
 	position: absolute;
 	right: 0;
 	width: 60%;
+	max-width: 35rem;
 	top: 8.4rem;
 	background-color: #222;
 	display: flex;
@@ -141,6 +142,48 @@ nav {
 }
 .nav-item a:not(.secondary) {
 	border-bottom: 1px solid #444;
+}
+
+/* Desktop Menu */
+
+@media all and (min-width: 1400px) {
+	.burger-menu {
+		display: none;
+	}
+	.navbar {
+		width: 80%;
+		margin: auto;
+	}
+	.nav-items {
+		all: unset;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.nav-item {
+		all: unset;
+	}
+	.nav-item a {
+		display: inline-block;
+		padding: 1rem 1rem;
+		opacity: 1;
+		letter-spacing: 0.2rem;
+	}
+	.nav-item a:not(.secondary) {
+		border-bottom: none;
+	}
+	.nav-item.link {
+		padding-left: 3rem;
+	}
+	.nav-item.button a {
+		font-weight: 500;
+		border: 2px solid #999;
+	}
+	.nav-item.button.primary {
+		padding-left: 10rem;
+		padding-right: 1rem;
+	}
 }
 
 .section-home {
